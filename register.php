@@ -10,7 +10,7 @@
     <div class="center">
       <h1>Register</h1>
         
-      <form method="post" action="">
+      <form method="post" action="includes/register-user.php">
       
         <div class="txt_field">
           <input type="text" required name="username">
