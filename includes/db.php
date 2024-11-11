@@ -1,5 +1,6 @@
 <?php
 
+session_start();
 // DSN = Data Source Name
 $DSN = "mysql:host=localhost;dbname=php_register-login "; 
 $DBUsername = "root";

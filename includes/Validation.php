@@ -57,6 +57,11 @@ class Validate {
             $error["email-exist"] = "Email already in use";
         }
 
+        if (!empty($error)) {
+            $_SESSION["signup_error"] = $error;
+            header("Location: ../register.php");
+        }
+
     }
 
 
