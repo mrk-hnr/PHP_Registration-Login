@@ -10,7 +10,7 @@
     <div class="center">
       <h1>Register</h1>
         
-      <form method="post" action="includes/register-user.php">
+      <form method="POST" action="includes/register-user.php">
       
         <div class="txt_field">
           <input type="text" required name="username">
@@ -31,7 +31,7 @@
         </div>
 
         <div class="txt_field">
-          <input type="password" required name="confirm_password">
+          <input type="password" required name="password_confirm">
           <span></span>
           <label>Confirm Password</label>
         </div>
