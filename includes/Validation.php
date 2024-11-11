@@ -27,6 +27,7 @@ class Validate {
     function validateData() {
 
         $error = [];
+        require_once "user-models.php";
 
         if (empty( $this -> username ) ||
             empty( $this -> email ) ||
@@ -46,6 +47,14 @@ class Validate {
 
         if (!filter_var( $this -> email, FILTER_VALIDATE_EMAIL)) {
             $error["invalid_email"] = "Invalid Email";
+        }
+
+        if (!empty( getUsername($this -> PDO, $this -> username) )) {
+            $error["username-exist"] = "Username already exist";
+        }
+
+        if (!empty( getUserEmail($this -> PDO, $this -> email) )) {
+            $error["email-exist"] = "Email already in use";
         }
 
     }
