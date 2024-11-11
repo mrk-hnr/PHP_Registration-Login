@@ -1,10 +1,9 @@
 <!DOCTYPE html>
-<!-- Coding By CodingNepal - youtube.com/codingnepal -->
 <html lang="en" dir="ltr">
   <head>
     <meta charset="utf-8">
     <title>Register</title>
-    <link rel="stylesheet" href="static/style.css">
+
   </head>
   <body>
     <div class="center">
@@ -31,7 +30,7 @@
         </div>
 
         <div class="txt_field">
-          <input type="password" required name="password_confirm">
+          <input type="password" required name="confirm_password">
           <span></span>
           <label>Confirm Password</label>
         </div>

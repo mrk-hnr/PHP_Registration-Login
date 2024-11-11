@@ -3,8 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
-    <title>Registration-Log.In</title>
+    <title>Document</title>
 </head>
 <body>
     <?php echo 'Hello world'; ?>
