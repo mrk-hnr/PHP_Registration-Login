@@ -2,9 +2,7 @@
 
 declare(strict_types=1);
 
-class Validate {
-
-    
+class ValidateRegistration {
 
     private $username;
     private $email;
@@ -54,5 +52,44 @@ class Validate {
             die();
         }
 
+    }
+}
+
+class ValidateLogin {
+
+    private $username;
+    private $password;
+    private $pdo;
+
+    function __construct(string $username, string $password, object $pdo) {
+        $this -> username = $username;
+        $this -> password = $password;
+        $this -> pdo = $pdo;
+    }
+
+    function validate_data() {
+
+        $error = [];
+        $user = get_user_username($this->pdo, $this->username);
+
+        if ( empty($this->username) || empty($this->password) ) {
+            $error["incomplete_form"] = "Please fill all fields";
+        }
+
+        if (!$user) {
+            $error["invalid_username"] = "Invalid Username";
+        }
+
+        if ($user && !password_verify($this->password, $user("pass"))) {
+            // "pass" is the name of the column in MySQL
+            //  !password_verify means it cannot verify the password
+            $error["invalid_password"] = "Invalid Password";
+        }
+
+        if (!empty($error)) {
+            $_SESSION["login_error"] = $error;
+            header("location: ../login.php");
+            die();
+        }
     }
 }

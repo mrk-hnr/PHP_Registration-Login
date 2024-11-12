@@ -13,7 +13,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
         require_once "validator.php";
         require_once "user-models.php";
     
-        $validate_user_data = new Validate($username, $email, $password, $confirm_password, $pdo);
+        $validate_user_data = new ValidateRegistration($username, $email, $password, $confirm_password, $pdo);
         $validate_user_data->validate_data();
     
         create_user($pdo, $username, $email, $password);

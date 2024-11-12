@@ -15,11 +15,11 @@ session_start();
 
       <?php
        require_once "includes/login-views.php";
-       render_success_message();
+       render_message();
        ?>
 
 
-      <form method="POST" action="">
+      <form method="POST" action="includes/login-user.php">
 
         <div class="txt_field">
           <input type="text" required name="username">
