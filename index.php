@@ -1,3 +1,7 @@
+<?php
+session_start();
+?>
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -9,6 +13,14 @@
 <body>
     <?php echo 'Hello world'; ?>
     <br><a href="#">Logout</a>
+
+
+    <?php 
+
+    
+    echo "<br> {$_SESSION["user"]["username"]} - {$_SESSION["user"]["email"]}";
+
+    ?>
 
 </body>
 </html>

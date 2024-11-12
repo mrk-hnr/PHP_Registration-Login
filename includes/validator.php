@@ -87,7 +87,7 @@ class ValidateLogin {
             $error["invalid_username"] = "Invalid Username";
         }
 
-        if ($user && !password_verify($this->password, $user("pass"))) {
+        if ($user && !password_verify($this->password, $user["pass"])) {
             // "pass" is the name of the column in MySQL
             //  !password_verify means it cannot verify the password
             $error["invalid_password"] = "Invalid Password";

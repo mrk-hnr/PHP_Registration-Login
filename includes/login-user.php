@@ -14,6 +14,8 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
         $validate_user = new ValidateLogin($username, $password, $pdo);
         $validate_user->validate_data();
 
+        $_SESSION["user"] = $validate_user->get_user_data();
+
         header("location: ../index.php");
         die();
 
