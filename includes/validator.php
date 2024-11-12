@@ -18,6 +18,7 @@ class ValidateRegistration {
         $this -> pdo = $pdo;
     }
 
+
     function validate_data() {
         
         $error = [];
@@ -55,6 +56,8 @@ class ValidateRegistration {
     }
 }
 
+
+
 class ValidateLogin {
 
     private $username;
@@ -67,10 +70,14 @@ class ValidateLogin {
         $this -> pdo = $pdo;
     }
 
+    function get_user_data() {
+        return get_user_username($this->pdo, $this->username);
+    }
+
     function validate_data() {
 
         $error = [];
-        $user = get_user_username($this->pdo, $this->username);
+        $user = $this->get_user_data();
 
         if ( empty($this->username) || empty($this->password) ) {
             $error["incomplete_form"] = "Please fill all fields";
