@@ -27,3 +27,14 @@ function get_user_email(object $pdo, string $email) {
 
     return $result;
 }
+
+function create_user(object $pdo, string $username, string $email, string $password) {
+
+    $query = "INSERT INTO users (username, email, pass) VALUES (:username, :email, :pass);";
+
+    $statement = $pdo->prepare($query);
+    $statement->bindparam("username", $username);
+    $statement->bindparam("email", $email);
+    $statement->bindparam("pass", $password);
+    $statement->execute();
+}

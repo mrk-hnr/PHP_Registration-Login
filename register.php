@@ -1,13 +1,25 @@
+<?php
+  session_start();
+?>
+
 <!DOCTYPE html>
 <html lang="en" dir="ltr">
   <head>
     <meta charset="utf-8">
+    <link rel="stylesheet" href="static/style.css?v=<?php echo time(); ?>">
     <title>Register</title>
 
   </head>
   <body>
     <div class="center">
       <h1>Register</h1>
+
+      <!-- <center><h2 style='color: firebrick'>Test</h2></center> -->
+       <?php
+       require_once "includes/register-views.php";
+       render_errors();
+       ?>
+
         
       <form method="POST" action="includes/register-user.php">
       

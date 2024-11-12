@@ -23,7 +23,6 @@ class Validate {
     function validate_data() {
         
         $error = [];
-        require_once "user-models.php";
 
         if (empty($this->username) || empty($this->email) || empty($this->password) || empty($this->confirm_password)) {
             $error["incomplete_form"] = "Please fill all fields";
@@ -52,6 +51,7 @@ class Validate {
         if (!empty($error)) {
             $_SESSION["signup_error"] = $error;
             header("location: ../register.php");
+            die();
         }
 
     }
