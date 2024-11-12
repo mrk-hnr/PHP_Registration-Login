@@ -2,6 +2,25 @@
 
 Another basic PHP project. It's a simple registration and login project that utilizes MySQL.
 
+<hr>
+
+### How It's Made:
+
+**PHP**
+
+- Manually created table in MySQL
+- Connected PHP with MySQL via PDO method (db.php).
+- Registration (Saving Data)
+  - Created PHP that when the input box are filled, it is saved into MySQL when submit is clicked.
+    - validator file makes sure all fields are filled with respective error messages.
+    - Password is hashed.
+- Logging In (Verifying Data(?))
+  - validator validates that username and password are exist in MySQL, with respective error messages.
+  - Prevents access to index page.
+- Index (Displaying Data)
+  - Displays username and email upon login.
+  - Prevents access to Registration and Login page.
+
 Quickstart MySQL Query:
 
 ```
@@ -14,3 +33,11 @@ CREATE TABLE users (
     PRIMARY KEY (id)
 );
 ```
+
+<hr>
+
+## Tech used:
+
+![HTML5](https://img.shields.io/badge/-HTML5-1d1f21?style=flat&logo=HTML5)
+![PHP](https://img.shields.io/badge/PHP-1d1f21?&logo=php)
+![MySQL](https://img.shields.io/badge/-MySQL-1d1f21?style=flat&logo=MySQL)
