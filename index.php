@@ -12,7 +12,7 @@ session_start();
 </head>
 <body>
     <?php echo 'Hello world'; ?>
-    <br><a href="#">Logout</a>
+    <br><a href="logout.php">Logout</a>
 
 
     <?php 
