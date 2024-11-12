@@ -8,19 +8,24 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     $password = $_POST["password"];
     $confirm_password = $_POST["confirm_password"];
 
-    require_once "db.php";
-    require_once "validator.php";
-    require_once "user-models.php";
-
-    $validate_user_data = new Validate($username, $email, $password, $confirm_password, $pdo);
-    $validate_user_data->validate_data();
-
-    create_user($pdo, $username, $email, $password);
+    try {
+        require_once "db.php";
+        require_once "validator.php";
+        require_once "user-models.php";
     
-    $_SESSION["signup_sucess"] = "Sign up Successful!";
+        $validate_user_data = new Validate($username, $email, $password, $confirm_password, $pdo);
+        $validate_user_data->validate_data();
+    
+        create_user($pdo, $username, $email, $password);
+        
+        $_SESSION["signup_sucess"] = "Sign up Successful!";
+    
+        header("location: ../login.php");
+        die();
 
-    header("location: ../login.php");
-    die();
+    } catch(PDOException $error) {
+        die("SQL Query Failed: " . $error->getMessage());
+    }
 
 } else {
     header("location: ../register.php");
