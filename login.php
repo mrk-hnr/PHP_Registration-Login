@@ -1,3 +1,7 @@
+<?php
+session_start();
+?>
+
 <!DOCTYPE html>
 <html lang="en" dir="ltr">
   <head>
@@ -8,6 +12,11 @@
   <body>
     <div class="center">
       <h1>Login</h1>
+
+      <?php
+       require_once "includes/login-views.php";
+       render_success_message();
+       ?>
 
 
       <form method="POST" action="">

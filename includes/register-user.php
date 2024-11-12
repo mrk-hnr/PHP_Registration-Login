@@ -16,6 +16,8 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     $validate_user_data->validate_data();
 
     create_user($pdo, $username, $email, $password);
+    
+    $_SESSION["signup_sucess"] = "Sign up Successful!";
 
     header("location: ../login.php");
     die();

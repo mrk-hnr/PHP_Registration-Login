@@ -40,7 +40,6 @@ function create_user(object $pdo, string $username, string $email, string $passw
 
     $hashed_password = password_hash($password, PASSWORD_BCRYPT, $options);
 
-
     $statement->bindparam("username", $username);
     $statement->bindparam("email", $email);
     $statement->bindparam("pass", $hashed_password);
