@@ -33,8 +33,16 @@ function create_user(object $pdo, string $username, string $email, string $passw
     $query = "INSERT INTO users (username, email, pass) VALUES (:username, :email, :pass);";
 
     $statement = $pdo->prepare($query);
+
+    $options = [
+        "cost" => 12
+    ];  // The higher the number, the harder to decrypt. However, it takes more computational power to read
+
+    $hashed_password = password_hash($password, PASSWORD_BCRYPT, $options);
+
+
     $statement->bindparam("username", $username);
     $statement->bindparam("email", $email);
-    $statement->bindparam("pass", $password);
+    $statement->bindparam("pass", $hashed_password);
     $statement->execute();
 }
