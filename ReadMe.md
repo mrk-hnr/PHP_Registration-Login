@@ -12,14 +12,16 @@ Another basic PHP project. It's a simple registration and login project that uti
 - Connected PHP with MySQL via PDO method (db.php).
 - Registration (Saving Data)
   - Created PHP that when the input box are filled, it is saved into MySQL when submit is clicked.
-    - validator file makes sure all fields are filled with respective error messages.
-    - Password is hashed.
+  - validator file makes sure all fields are filled with respective error messages.
+  - Password is hashed.
 - Logging In (Verifying Data(?))
   - validator validates that username and password are exist in MySQL, with respective error messages.
   - Prevents access to index page.
 - Index (Displaying Data)
   - Displays username and email upon login.
   - Prevents access to Registration and Login page.
+
+<hr>
 
 Quickstart MySQL Query:
 
