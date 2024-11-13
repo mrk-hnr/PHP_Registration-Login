@@ -162,6 +162,10 @@ h2 {
 .overlay-right {
     right: 0;
     transform: translateX(0%);
+
+    h2 {
+        font-size: 2rem;
+    }
 }
 
 .overlay-panel h2 {
@@ -236,18 +240,13 @@ button {
     cursor: pointer;
     position: absolute;
     left: 50%;
-    top: 29.3rem;
+    top: 29.6rem;
     transform: translateX(-50%);
     width: 14.4rem;
     height: 4rem;
     border: .1rem solid #FFF;
     border-radius: 2rem;
 }
-
-#signIn {
-    margin-bottom: 5px;
-}
-
 
 // SIGN UP
 

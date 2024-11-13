@@ -107,14 +107,17 @@ if (isset($_SESSION["user"])) {
             <div class="overlay">
 
             <div class="overlay-panel overlay-left">
-                    <h1>Welcome Back!</h1>
-                    <p>To keep connected with us please login with your personal info</p>
-                    <button id="signIn">Sign In</button>
+                    <h1>Hello, Friend!</h1>
+                    <p>Enter your details on the right to create an account or login below</p>
+                    <button>Sign In</button>
                 </div>
 
                 <div class="overlay-panel overlay-right">
-                    <h2>Hello, Friend!</h2>
-                    <p>Enter your personal details and start journey with us</p>
+                    
+                    <h2>Welcome back!</h2>
+
+                    <p>Access your account in the left or click below to create an account</p>
+                    
                     <button>Sign Up</button>
                 </div>
             </div>
@@ -124,7 +127,14 @@ if (isset($_SESSION["user"])) {
       </div>
 
   <footer>
-    <mark>See more on <a href="https://www.youtube.com/channel/UCHIkJZkap10qGFHq5ViIExg">Karacode</a></mark>
+    <h3>Contact</h3>
+    <div class="footer__socials">
+      <a href="https://github.com/mrk-hnr"><img src="./assets/github.svg" alt=""></a>
+
+      <a href="https://www.linkedin.com/in/mrk-hnr/">
+        <img src="./assets/linkedin.svg" alt="">
+      </a>
+    </div>
 </footer>
 
 

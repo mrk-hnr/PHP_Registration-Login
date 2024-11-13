@@ -184,6 +184,9 @@ h2 {
   right: 0;
   transform: translateX(0%);
 }
+.overlay-right h2 {
+  font-size: 2rem;
+}
 
 .overlay-panel h2 {
   color: #FFF;
@@ -250,16 +253,12 @@ button {
   cursor: pointer;
   position: absolute;
   left: 50%;
-  top: 29.3rem;
+  top: 29.6rem;
   transform: translateX(-50%);
   width: 14.4rem;
   height: 4rem;
   border: 0.1rem solid #FFF;
   border-radius: 2rem;
-}
-
-#signIn {
-  margin-bottom: 5px;
 }
 
 .sign-up-container {
@@ -290,20 +289,32 @@ button {
 }
 
 footer {
-  position: absolute;
-  left: 50%;
-  bottom: 30px;
-  transform: translateX(-50%);
+  text-align: center;
+  position: fixed;
+  left: 0;
+  bottom: 2%;
+  width: 100%;
+  text-transform: uppercase;
 }
 
-footer mark {
-  padding: 8px 30px;
-  border-radius: 7px;
+.footer__socials {
+  padding-top: 2rem;
+  display: flex;
+  margin: 0 auto;
+  width: 13rem;
+  justify-content: space-between;
 }
-
-footer a {
-  text-decoration: none;
-  font-size: 18px;
-  font-weight: bold;
-  color: #003;
+.footer__socials a {
+  padding: 0.7rem;
+  border: 0.1rem solid #5c5c5c;
+  border-radius: 50%;
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+  margin: 0 0.5rem;
+  height: 4rem;
+  width: 4rem;
+}
+.footer__socials a img {
+  height: 70%;
 }/*# sourceMappingURL=style.css.map */
