@@ -21,6 +21,14 @@ Another basic PHP project. It's a simple registration and login project that uti
   - Displays username and email upon login.
   - Prevents access to Registration and Login page.
 
+**CSS/SASS**
+
+- Implemented SASS styling the login-registration page.
+
+**JavaScript**
+
+- Created script that enables toggling of class in order to implement an animation.
+
 <hr>
 
 Quickstart MySQL Query:
@@ -41,5 +49,8 @@ CREATE TABLE users (
 ## Tech used:
 
 ![HTML5](https://img.shields.io/badge/-HTML5-1d1f21?style=flat&logo=HTML5)
+![CSS3](https://img.shields.io/badge/-CSS3-1d1f21?style=flat&logo=CSS3)
+![SASS](https://img.shields.io/badge/-Sass-1d1f21?style=flat&logo=Sass&logoColor=CC6699)
+![JavaScript](https://img.shields.io/badge/-JavaScript-1d1f21?style=flat&logo=javascript)
 ![PHP](https://img.shields.io/badge/PHP-1d1f21?&logo=php)
 ![MySQL](https://img.shields.io/badge/-MySQL-1d1f21?style=flat&logo=MySQL)
