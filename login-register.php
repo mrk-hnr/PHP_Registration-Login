@@ -21,6 +21,10 @@ if (isset($_SESSION["user"])) {
 <!-- ------------------------------------------------ -->
 
   <div class="container" id="container">
+  <?php
+       require_once "includes/register-views.php";
+       require_once "includes/login-views.php";
+  ?>
 
 
       <div class="form-container sign-up-container">
@@ -52,6 +56,7 @@ if (isset($_SESSION["user"])) {
             <div class="infield">
               <input type="password" required name="confirm_password" placeholder="Retype Password">
               <label></label>
+              
             </div>
 
             <button>Sign Up</button>
@@ -65,6 +70,7 @@ if (isset($_SESSION["user"])) {
 
       <div class="container" id="container">
         <div class="form-container sign-in-container">
+          <?php render_errors(); ?>
           <form method="POST" action="includes/login-user.php">
             <h2>Sign In</h2>
 
@@ -83,6 +89,7 @@ if (isset($_SESSION["user"])) {
             <div class="infield">
               <input type="password" required name="password" placeholder="Password">
               <label></label>
+              <?php render_message(); ?>
             </div>
             <a href="#" class="forgot">Forgot your password?</a>
             <button>Sign In</button>

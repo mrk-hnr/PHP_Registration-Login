@@ -27,18 +27,6 @@ class ValidateRegistration {
             $error["incomplete_form"] = "Please fill all fields";
         }
 
-        if ($this->password !== $this->confirm_password) {
-            $error["password_mismatch"] = "Password does not match";
-        }
-
-        if (strlen($this->password) < 5) {
-            $error["password_length_error"] = "Password should be more than 5 characters";
-        }
-
-        if (!filter_var($this->email, FILTER_VALIDATE_EMAIL)) {
-            $error["invalid_email"] = "Email is not valid";
-        }
-
         if (!empty(get_user_username($this->pdo, $this->username))) {
             $error["username_exist"] = "Username already exist";
         }
@@ -47,15 +35,29 @@ class ValidateRegistration {
             $error["email_exist"] = "Email already in use";
         }
 
+        if (!filter_var($this->email, FILTER_VALIDATE_EMAIL)) {
+            $error["invalid_email"] = "Email is not valid";
+        }
+
+
+
+        if ($this->password !== $this->confirm_password) {
+            $error["password_mismatch"] = "Password does not match";
+        }
+
+        if (strlen($this->password) < 5) {
+            $error["password_length_error"] = "Password should be more than 5 characters";
+        }
+
+
         if (!empty($error)) {
             $_SESSION["signup_error"] = $error;
-            header("location: ../register.php");
+            header("location: ../login-register.php");
             die();
         }
 
     }
 }
-
 
 
 class ValidateLogin {
@@ -95,7 +97,7 @@ class ValidateLogin {
 
         if (!empty($error)) {
             $_SESSION["login_error"] = $error;
-            header("location: ../login.php");
+            header("location: ../login-register.php");
             die();
         }
     }

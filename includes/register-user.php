@@ -20,7 +20,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
         
         $_SESSION["signup_sucess"] = "Sign up Successful!";
     
-        header("location: ../login.php");
+        header("location: ../login-register.php");
         die();
 
     } catch(PDOException $error) {
@@ -28,5 +28,5 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     }
 
 } else {
-    header("location: ../register.php");
+    header("location: ../login-register.php");
 }

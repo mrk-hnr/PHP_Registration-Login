@@ -5,7 +5,7 @@ function render_message() {
     if (isset($_SESSION["signup_sucess"])) {
 
         $message = $_SESSION["signup_sucess"];
-        echo "<center><h2 style='color:dodgerblue'> {$message} </h2></center>";
+        echo "<center><h2 class='success-register'> {$message} </h2></center>";
     
         unset($_SESSION["signup_sucess"]);
     }
@@ -15,7 +15,7 @@ function render_message() {
         $error = $_SESSION["login_error"];
     
         foreach ($error as $err) {
-            echo "<center><h2 style='color:firebrick'> {$err} </h2></center>";
+            echo "<center><h2 class='error-login'> {$err} </h2></center>";
         }
     
         unset($_SESSION["login_error"]);

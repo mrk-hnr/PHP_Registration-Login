@@ -7,7 +7,7 @@ function render_errors() {
         $error = $_SESSION["signup_error"];
 
         foreach ($error as $err) {
-            echo "<center><h2 style='color:firebrick'> {$err} </h2></center>";
+            echo "<center><h2 class='error-register'> {$err} </h2></center>";
         }
 
         unset($_SESSION["signup_error"]);

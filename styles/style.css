@@ -1,0 +1,309 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700;800;900&display=swap");
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: inherit;
+}
+
+html {
+  font-size: 62.5%;
+}
+
+:root {
+  --linear-grad: linear-gradient(to right, #141E30, #243B55);
+  --grad-clr1: #141E30;
+  --grad-clr2: #243B55;
+}
+
+body {
+  height: 100vh;
+  background: #f6f5f7;
+  display: grid;
+  place-content: center;
+  font-family: "Poppins", sans-serif;
+  box-sizing: border-box;
+}
+
+ul {
+  list-style: none;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+.container {
+  position: relative;
+  width: 85rem;
+  height: 50rem;
+  background-color: #fff;
+  box-shadow: 2.5rem 3rem 5.5rem rgba(85, 85, 85, 0.4666666667);
+  border-radius: 1.3rem;
+  overflow: hidden;
+}
+
+.form-container {
+  position: absolute;
+  width: 60%;
+  height: 100%;
+  padding: 0 4rem;
+  transition: all 0.6s ease-in-out;
+}
+.form-container span {
+  font-size: 1.2rem;
+}
+
+form {
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 0 5rem;
+}
+form a {
+  color: #333;
+  font-size: 1.5rem;
+  text-decoration: none;
+  margin: 1.5rem 0;
+}
+form a.forgot {
+  padding-bottom: 3rem;
+  border-bottom: 0.2rem solid #EEE;
+}
+form button {
+  border-radius: 2rem;
+  border: 0.1rem solid var(--grad-clr1);
+  background: var(--grad-clr2);
+  color: #FFF;
+  font-size: 1.2rem;
+  font-weight: bold;
+  padding: 1.2rem 4.5rem;
+  letter-spacing: 0.1rem;
+  text-transform: uppercase;
+  margin-top: 1.7rem;
+  transition: 0.5s ease-in-out;
+}
+form button:hover {
+  background: #FFF;
+  color: var(--grad-clr2);
+  cursor: pointer;
+}
+
+h2 {
+  color: var(--grad-clr1);
+}
+
+.social-container {
+  margin: 2rem 0;
+}
+.social-container a {
+  padding: 0.7rem;
+  border: 0.1rem solid #DDD;
+  border-radius: 50%;
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+  margin: 0 0.5rem;
+  height: 4rem;
+  width: 4rem;
+}
+.social-container a img {
+  height: 100%;
+}
+
+.infield {
+  position: relative;
+  margin: 0.8rem 0;
+  width: 100%;
+}
+.infield input {
+  width: 100%;
+  padding: 1.2rem 1.5rem;
+  background: #F3F3F3;
+  border: none;
+  outline: none;
+}
+.infield input:focus ~ label {
+  width: 100%;
+}
+.infield label {
+  position: absolute;
+  left: 50%;
+  top: 100%;
+  transform: translateX(-50%);
+  width: 0%;
+  height: 0.2rem;
+  background: var(--linear-grad);
+  transition: 0.3s;
+}
+
+.overlay-container {
+  position: absolute;
+  top: 0;
+  left: 60%;
+  width: 40%;
+  height: 100%;
+  overflow: hidden;
+  transition: transform 0.6s ease-in-out;
+  z-index: 10;
+}
+
+.overlay {
+  position: relative;
+  background: var(--linear-grad);
+  color: #FFF;
+  left: -150%;
+  height: 100%;
+  width: 250%;
+  transition: transform 0.6s ease-in-out;
+}
+
+.overlay-panel {
+  position: absolute;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  padding: 0 4rem;
+  text-align: center;
+  height: 100%;
+  width: 34rem;
+  transition: 0.6s ease-in-out;
+}
+
+.overlay-left {
+  right: 60%;
+  transform: translateX(-12%);
+}
+
+.overlay-right {
+  right: 0;
+  transform: translateX(0%);
+}
+
+.overlay-panel h2 {
+  color: #FFF;
+}
+
+p {
+  font-size: 1.4rem;
+  font-weight: 300;
+  line-height: 2rem;
+  letter-spacing: 0.5px;
+  margin: 2.5rem 0 3.5rem;
+}
+
+button {
+  border: none;
+  background-color: transparent;
+  text-transform: uppercase;
+  color: #FFF;
+  font-size: 1.2rem;
+  font-weight: bold;
+  margin-top: 0.1rem;
+  letter-spacing: 0.1rem;
+}
+
+.right-panel-active .overlay-container {
+  transform: translateX(-150%);
+}
+
+.right-panel-active .overlay {
+  transform: translateX(50%);
+}
+
+.right-panel-active .overlay-left {
+  transform: translateX(25%);
+}
+
+.right-panel-active .overlay-right {
+  transform: translateX(35%);
+}
+
+.right-panel-active .sign-in-container {
+  transform: translateX(20%);
+  opacity: 0;
+}
+
+.right-panel-active .sign-up-container {
+  transform: translateX(66.7%);
+  opacity: 1;
+  z-index: 5;
+  animation: show 0.6s;
+}
+
+@keyframes show {
+  0%, 50% {
+    opacity: 0;
+    z-index: 1;
+  }
+  50.1%, 100% {
+    opacity: 1;
+    z-index: 5;
+  }
+}
+#overlayBtn {
+  cursor: pointer;
+  position: absolute;
+  left: 50%;
+  top: 29.3rem;
+  transform: translateX(-50%);
+  width: 14.4rem;
+  height: 4rem;
+  border: 0.1rem solid #FFF;
+  border-radius: 2rem;
+}
+
+#signIn {
+  margin-bottom: 5px;
+}
+
+.sign-up-container {
+  opacity: 0;
+  z-index: 1;
+}
+
+.sign-in-container {
+  z-index: 2;
+}
+
+.success-register {
+  text-align: center;
+  margin: 0 auto;
+  color: green;
+}
+
+.error-register {
+  text-align: center;
+  margin: 0 auto;
+  color: firebrick;
+}
+
+.error-login {
+  text-align: center;
+  margin: 0 auto;
+  color: firebrick;
+}
+
+footer {
+  position: absolute;
+  left: 50%;
+  bottom: 30px;
+  transform: translateX(-50%);
+}
+
+footer mark {
+  padding: 8px 30px;
+  border-radius: 7px;
+}
+
+footer a {
+  text-decoration: none;
+  font-size: 18px;
+  font-weight: bold;
+  color: #003;
+}/*# sourceMappingURL=style.css.map */
