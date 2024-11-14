@@ -29,7 +29,9 @@ if (!isset($_SESSION["user"])) {
 
     <div>
         <a href='edit-user.php'>Edit</a>
-        <a href='includes/delete-user.php?deleteID={$id} id='delete-button'>Deactivate</a>
+        <a href='includes/delete-user.php?deleteID={$id}
+            id='delete-button'
+            onClick=\"javascript: return confirm('Please confirm deletion');\">Deactivate</a>
     </div>"
 
     ;?>
@@ -39,6 +41,6 @@ if (!isset($_SESSION["user"])) {
 
 
     
-<?php echo "<script src='../script.js'></script>" ?>
+
 </body>
 </html>

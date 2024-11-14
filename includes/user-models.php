@@ -56,5 +56,9 @@ function delete_user_data(object $pdo, int $id) {
 
     $result = $statement->fetch(PDO::FETCH_ASSOC);
 
-    return $result;
+    session_unset();
+session_destroy();
+
+header("location: ../login-register.php");
+die();
 }
