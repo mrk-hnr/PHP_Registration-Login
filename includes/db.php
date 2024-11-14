@@ -24,6 +24,7 @@ $host = "localhost";
 $DBName = "php_register-login";
 $DBUsername = "root";
 $DBPassword = "";
+$DSN = "mysql:host=localhost;dbname=php_register-login"; 
 
 try {
 

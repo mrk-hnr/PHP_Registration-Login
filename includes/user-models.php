@@ -45,3 +45,16 @@ function create_user(object $pdo, string $username, string $email, string $passw
     $statement->bindparam("pass", $hashed_password);
     $statement->execute();
 }
+
+function delete_user_data(object $pdo, int $id) {
+
+    $query = "DELETE FROM users WHERE id = :id;";
+
+    $statement = $pdo->prepare($query);
+    $statement->bindparam("id", $id);
+    $statement->execute();
+
+    $result = $statement->fetch(PDO::FETCH_ASSOC);
+
+    return $result;
+}

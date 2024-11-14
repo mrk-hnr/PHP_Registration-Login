@@ -18,13 +18,27 @@ if (!isset($_SESSION["user"])) {
     <?php echo 'Hello world'; ?>
     <br><a href="logout.php">Logout</a>
 
-
     <?php 
+    $user = $_SESSION["user"]["username"];
+    $email = $_SESSION["user"]["email"];
+    $id = $_SESSION["user"]["id"];
+
 
     
-    echo "<br> {$_SESSION["user"]["username"]} - {$_SESSION["user"]["email"]}";
+    echo "<br> {$user} - {$email} - {$id}
 
-    ?>
+    <div>
+        <a href='edit-user.php'>Edit</a>
+        <a href='includes/delete-user.php?deleteID={$id} id='delete-button'>Deactivate</a>
+    </div>"
 
+    ;?>
+
+
+
+
+
+    
+<?php echo "<script src='../script.js'></script>" ?>
 </body>
 </html>

@@ -73,7 +73,7 @@ class ValidateLogin {
     }
 
     function get_user_data() {
-        return get_user_username($this->pdo, $this->username);
+        return get_user_username($this->pdo, $this->username); // func in user-models
     }
 
     function validate_data() {
@@ -100,5 +100,19 @@ class ValidateLogin {
             header("location: ../login-register.php");
             die();
         }
+    }
+}
+
+class ValidateDelete {
+    private $id;
+    private $pdo;
+
+    function __construct(int $id, object $pdo) {
+        $this -> id = $id;
+        $this -> pdo = $pdo;
+    }
+
+    function delete_user_data() { // validator
+        return delete_user_data($this->pdo, $this->id); // user-models
     }
 }
