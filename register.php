@@ -1,10 +1,7 @@
 <?php
-session_start();
-
 if (isset($_SESSION["user"])) {
   header("location: index.php");
 }
-
 ?>
 
 <!DOCTYPE html>
@@ -122,6 +119,5 @@ if (isset($_SESSION["user"])) {
 
 
 <?php echo "<script src='script.js'></script>" ?>
-
   </body>
 </html>

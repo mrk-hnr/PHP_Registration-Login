@@ -1,5 +1,4 @@
 <?php
-
 declare(strict_types=1);
 
 function get_user_username(object $pdo, string $username) {
@@ -57,8 +56,32 @@ function delete_user_data(object $pdo, int $id) {
     $result = $statement->fetch(PDO::FETCH_ASSOC);
 
     session_unset();
-session_destroy();
+    session_destroy();
 
 header("location: ../login-register.php");
 die();
+}
+
+function update_user(object $pdo, int $id, string $username, string $email, string $password) {
+        if ($id) {
+            $query = "UPDATE users SET username = :username, email = :email, pass = :pass WHERE id = :id";
+
+            $statement = $pdo->prepare($query);
+
+            $options = [
+                "cost" => 12
+            ];  // The higher the number, the harder to decrypt. However, it takes more computational power to read
+
+            $hashed_password = password_hash($password, PASSWORD_BCRYPT, $options);
+
+            $statement->bindParam(":id", $id, PDO::PARAM_INT);
+            $statement->bindParam(":username", $username);
+            $statement->bindParam(":email", $email);
+            $statement->bindParam(":pass", $hashed_password);
+
+            $statement->execute();
+        } 
+
+
+    
 }

@@ -1,8 +1,9 @@
 <?php
+
 session_start();
 
 if (!isset($_SESSION["user"])) {
-    header("location: login.php");
+    header("location: login-register.php");
 }
 ?>
 
@@ -28,9 +29,10 @@ if (!isset($_SESSION["user"])) {
     echo "<br> {$user} - {$email} - {$id}
 
     <div>
-        <a href='edit-user.php'>Edit</a>
+        <a href='update.php?id={$id}'>Edit</a>
+
+
         <a href='includes/delete-user.php?deleteID={$id}
-            id='delete-button'
             onClick=\"javascript: return confirm('Please confirm deletion');\">Deactivate</a>
     </div>"
 

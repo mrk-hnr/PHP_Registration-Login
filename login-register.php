@@ -1,10 +1,8 @@
 <?php
-session_start();
-
+ini_set('display_errors', 1);
 if (isset($_SESSION["user"])) {
   header("location: index.php");
 }
-
 ?>
 
 <!DOCTYPE html>

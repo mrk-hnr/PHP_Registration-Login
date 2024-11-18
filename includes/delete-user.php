@@ -2,6 +2,7 @@
 
 if (isset($_GET["deleteID"])) {
     $dbID = (int)$_GET["deleteID"];
+    sleep(3);
 
     try {
         require_once "db.php";
@@ -10,6 +11,8 @@ if (isset($_GET["deleteID"])) {
 
         $validate_delete = new validateDelete($dbID, $pdo);
         $_SESSION["user"] = $validate_delete->delete_user_data();
+
+
 
         header("location: ../login-register.php");
         die();
