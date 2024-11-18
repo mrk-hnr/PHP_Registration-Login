@@ -1,6 +1,8 @@
 <?php
 
 include('db.php');
+include('validator.php');
+include('user-models.php');
 
     if(isset($_POST['update_student_btn'])) {
         $user_id = $_POST['user_id'];
@@ -30,6 +32,11 @@ include('db.php');
             if($query_execute)
             {
                 $_SESSION['message'] = "Updated Successfully";
+
+                $validate_user = new ValidateLogin($username, $password, $pdo);$validate_user->validate_data();
+                $_SESSION["user"] = $validate_user->get_user_data();
+
+
                 header('Location: ../index.php');
                 exit(0);
             }
