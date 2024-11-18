@@ -27,25 +27,15 @@ if (!isset($_SESSION["user"])) {
     $email = $_SESSION["user"]["email"];
     $id = $_SESSION["user"]["id"];
 
-
-    
     echo "<br> {$user} - {$email} - {$id}
 
     <div>
         <a href='update.php?id={$id}'>Edit</a>
 
-
         <a href='includes/delete-user.php?deleteID={$id}
+            id='delete-button'
             onClick=\"javascript: return confirm('Please confirm deletion');\">Deactivate</a>
-    </div>"
 
-    ;?>
-
-
-
-
-
-    
-
+    </div>";?>
 </body>
 </html>

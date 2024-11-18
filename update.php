@@ -31,37 +31,33 @@ include('includes/db.php');
         } ?>
 
       <form action="includes/update-user.php" method="POST">
-        <input type="text" name="user_id" value="<?php echo $result->id?>" />
-
-                            <div>
-                                <label>Username</label>
-                                <input type="text" name="username" value="<?= $result->username; ?>" class="form-control" />
-                            </div>
-
-                            <div>
-                                <label>Email</label>
-                                <input type="text" name="email" value="<?= $result->email; ?>" class="form-control" />
-                            </div>
-                            
-                            <div>
-                                <label>Password</label>
-                                <input type="text" name="password" value="<?= $result->pass; ?>" class="form-control" />
-                            </div>
-
-                            <div>
-                                <label>Retype Password</label>
-                                <input type="text" name="course" value="<?= $result->pass; ?>" class="form-control" />
-                            </div>
-
-                            <div>
-                                <button type="submit" name="update_student_btn" class="btn btn-primary">Update Student</button>
-                            </div>
-                        </form>
-
-                    </div>
-                </div>
-            </div>
+        <input type="hidden" name="user_id" value="<?php echo $result->id?>" />
+        <div>
+          <label>Username</label>
+          <input type="text" name="username" value="<?= $result->username; ?>" required />
         </div>
+        
+        <div>
+          <label>Email</label>
+          <input type="text" name="email" value="<?= $result->email; ?>" />
+        </div>
+        
+        <div>
+          <label>Password</label>
+          <input type="text" name="password" placeholder="<?= $result->pass; ?>" required />
+        </div>
+        
+        <div>
+          <label>Retype Password</label>
+          <input type="text" name="course" placeholder="<?= $result->pass; ?>" required />
+        </div>
+        
+        <div>
+          <button type="submit" name="update_student_btn" class="btn btn-primary">Save Changes</button>
+        </div>
+
+      </form>
+
     </div>
   </body>
 </html>
