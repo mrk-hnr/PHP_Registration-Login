@@ -1,6 +1,6 @@
 # Registration/Login - PHP
 
-Another basic PHP project. It's a simple registration and login project that utilizes MySQL.
+Another basic PHP CRUD project. It's a simple registration and login project that utilizes MySQL.
 
 <hr>
 
@@ -20,6 +20,8 @@ Another basic PHP project. It's a simple registration and login project that uti
 - Index (Displaying Data)
   - Displays username and email upon login.
   - Prevents access to Registration and Login page.
+- Update
+  - Allows users to change their username, email, and password
 
 **CSS/SASS**
 
@@ -28,6 +30,8 @@ Another basic PHP project. It's a simple registration and login project that uti
 **JavaScript**
 
 - Created script that enables toggling of class in order to implement an animation.
+- Created script that allows a "panel" to be visible and hide all other panel.
+- Added an alert on deactivation of account (deletion of data)
 
 <hr>
 
