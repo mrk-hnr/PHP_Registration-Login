@@ -31,7 +31,7 @@ Another basic PHP CRUD project. It's a simple registration and login project tha
 
 - Created script that enables toggling of class in order to implement an animation.
 - Created script that allows a "panel" to be visible and hide all other panel.
-- Added an alert on deactivation of account (deletion of data)
+- Added an alert on deactivation of account (deletion of data).
 
 <hr>
 
