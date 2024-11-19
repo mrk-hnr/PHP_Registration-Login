@@ -102,7 +102,8 @@ After a signing in, it demonstrates account deletion. <br>
 
 As per the demo above, the user was redirected to the login page after the account deletion. The user attempted to sign in again but it returned an error as the username no longer exist. <br><br>
 Below is the database after the account was deleted. <br>
-As per the image below, the last username is now moonmoon with id 31.
+As per the image below, The user donaldduck with id 37 is now deleted <br>
+and the last username is now moonmoon with id 31.
 ![](assets/ReadMe/post-delete.PNG)
 
 ## Tech used:
