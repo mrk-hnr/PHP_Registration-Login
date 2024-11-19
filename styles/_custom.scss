@@ -1,3 +1,14 @@
+.body-login {
+    position: absolute;
+    left: 0; 
+    right: 0; 
+    margin: 0 5rem;
+    
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+
 .container {
     position: relative;
     width: 85rem;
@@ -8,12 +19,14 @@
     overflow: hidden;
 }
 
+
 .form-container {
     position: absolute;
     width: 60%;
     height: 100%;
     padding: 0 4rem;
     transition: all .6s ease-in-out;
+    padding: 0 3rem;
 
     span {
         font-size: 1.2rem;
@@ -265,15 +278,21 @@ button {
     text-align: center;
     margin: 0 auto;
     color: green;
+    z-index: 10;
+
 }
 .error-register {
     text-align: center;
     margin: 0 auto;
     color: firebrick;
+    z-index: 10;
+
 }
 
 .error-login {
     text-align: center;
     margin: 0 auto;
     color: firebrick;
+    z-index: 10;
+
 }

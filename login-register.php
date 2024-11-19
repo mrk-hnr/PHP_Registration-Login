@@ -1,5 +1,5 @@
 <?php
-ini_set('display_errors', 1);
+session_start();
 if (isset($_SESSION["user"])) {
   header("location: index.php");
 }
@@ -13,7 +13,7 @@ if (isset($_SESSION["user"])) {
     <title>Login</title>
 
   </head>
-  <body>
+  <body class="body-login">
 <!-- ------------------------------------------------ -->
 <!-- ------------------- REGISTER ------------------- -->
 <!-- ------------------------------------------------ -->
@@ -68,8 +68,9 @@ if (isset($_SESSION["user"])) {
 
       <div class="container" id="container">
         <div class="form-container sign-in-container">
-          <?php render_errors(); ?>
+
           <form method="POST" action="includes/login-user.php">
+            
             <h2>Sign In</h2>
 
             <div class="social-container">
@@ -87,10 +88,12 @@ if (isset($_SESSION["user"])) {
             <div class="infield">
               <input type="password" required name="password" placeholder="Password">
               <label></label>
-              <?php render_message(); ?>
+              
             </div>
             <a href="#" class="forgot">Forgot your password?</a>
             <button>Sign In</button>
+            <?php render_errors(); ?>
+            <?php render_message(); ?>
           </form> 
         </div>
       </div>
@@ -118,7 +121,7 @@ if (isset($_SESSION["user"])) {
 
       </div>
 
-  <footer>
+  <!-- <footer>
     <h3>Contact</h3>
     <div class="footer__socials">
       <a href="https://github.com/mrk-hnr"><img src="./assets/github.svg" alt=""></a>
@@ -127,7 +130,7 @@ if (isset($_SESSION["user"])) {
         <img src="./assets/linkedin.svg" alt="">
       </a>
     </div>
-</footer>
+</footer> -->
 
 
 <?php echo "<script src='./js/script.js'></script>" ?>
