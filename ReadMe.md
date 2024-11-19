@@ -50,6 +50,61 @@ CREATE TABLE users (
 
 <hr>
 
+### Demo:
+
+The screenshot of the data below are the data before creating the account. <br>
+Notice that the last data is moonmoon with id 31.
+![](assets/ReadMe/pre-registration.PNG)
+
+Below is a demo of the registration process showing error messages until a successful account creation.
+
+<p align="center">
+<img src="assets/ReadMe/registration.gif" height="450">
+</p>
+
+After a successful registration, the data is saved into the database. <br>
+Notice that the last data is now mickeymouse with id 37.
+![](assets/ReadMe/post-registration.PNG)
+
+The demo below is the login process after the registration. <br>
+It also displays the possible error messages one may encounter before making a successful login.
+<br>
+After logging in, it will display the username and email on the main home page.
+
+<p align="center">
+<img src="assets/ReadMe/login.gif" height="450">
+</p>
+
+Below is a demo of the update function. <br>
+It would allow one to update their username, email, and password. <br>
+In the end, you would notice that the username and email in the home page reflects the new changes.
+
+<p align="center">
+<img src="assets/ReadMe/edit.gif" height="450">
+</p>
+
+After a successful update, the data in the database is updated. <br>
+Notice that the last data is now donaldduck BUT the id is still 37.
+![](assets/ReadMe/post-update.PNG)
+
+After updating the data, the demo below demonstrate the sign out funtion.
+
+<p align="center">
+<img src="assets/ReadMe/signout.gif" height="450">
+</p>
+
+After signing out, the demo below shows that the new username is used to sign in. <br>
+After a signing in, it demonstrates account deletion. <br>
+
+<p align="center">
+<img src="assets/ReadMe/delete.gif" height="450">
+</p>
+
+As per the demo above, the user was redirected to the login page after the account deletion, and an attempt to re-sign in will result an error as the username no longer exist. <br><br>
+Below is the database after the account was deleted. <br>
+As per the image below, the last username is now moonmoon with id 31.
+![](assets/ReadMe/post-delete.PNG)
+
 ## Tech used:
 
 ![HTML5](https://img.shields.io/badge/-HTML5-1d1f21?style=flat&logo=HTML5)
