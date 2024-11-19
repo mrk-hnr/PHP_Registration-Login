@@ -26,7 +26,7 @@ include('includes/db.php');
         $data = [':id' => $user_id];
         $statement->execute($data);
 
-        $result = $statement->fetch(PDO::FETCH_OBJ); //PDO::FETCH_ASSOC
+        $result = $statement->fetch(PDO::FETCH_OBJ); // PDO::FETCH_ASSOC
 
         } ?>
 
@@ -49,11 +49,11 @@ include('includes/db.php');
         
         <div>
           <label>Retype Password</label>
-          <input type="text" name="course" placeholder="<?= $result->pass; ?>" required />
+          <input type="text" name="confirm_password" placeholder="<?= $result->pass; ?>" required />
         </div>
         
         <div>
-          <button type="submit" name="update_student_btn" class="btn btn-primary">Save Changes</button>
+          <button type="submit" name="update_user" class="btn btn-primary">Save Changes</button>
         </div>
 
       </form>

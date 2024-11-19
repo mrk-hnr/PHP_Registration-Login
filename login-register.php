@@ -91,16 +91,10 @@ if (isset($_SESSION["user"])) {
             </div>
             <a href="#" class="forgot">Forgot your password?</a>
             <button>Sign In</button>
-          </form>
-
-
-
-
+          </form> 
         </div>
       </div>
-
-
-
+      
       <div class="overlay-container" id="overlayCon">
             <div class="overlay">
 
@@ -136,7 +130,6 @@ if (isset($_SESSION["user"])) {
 </footer>
 
 
-<?php echo "<script src='script.js'></script>" ?>
-
+<?php echo "<script src='./js/script.js'></script>" ?>
   </body>
 </html>

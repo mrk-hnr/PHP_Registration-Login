@@ -4,7 +4,7 @@ include('db.php');
 include('validator.php');
 include('user-models.php');
 
-    if(isset($_POST['update_student_btn'])) {
+    if(isset($_POST['update_user'])) {
         $user_id = $_POST['user_id'];
         $username = $_POST['username'];
         $email = $_POST['email'];
