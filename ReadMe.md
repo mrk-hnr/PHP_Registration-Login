@@ -100,7 +100,7 @@ After a signing in, it demonstrates account deletion. <br>
 <img src="assets/ReadMe/delete.gif" height="450">
 </p>
 
-As per the demo above, the user was redirected to the login page after the account deletion, and an attempt to re-sign in will result an error as the username no longer exist. <br><br>
+As per the demo above, the user was redirected to the login page after the account deletion. The user attempted to sign in again but it returned an error as the username no longer exist. <br><br>
 Below is the database after the account was deleted. <br>
 As per the image below, the last username is now moonmoon with id 31.
 ![](assets/ReadMe/post-delete.PNG)
